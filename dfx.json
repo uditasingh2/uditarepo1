@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "uditarepo_backend": {
+      "main": "src/uditarepo_backend/main.mo",
+      "type": "motoko"
+    },
+    "uditarepo_frontend": {
+      "dependencies": [
+        "uditarepo_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/uditarepo_frontend/src/index.html"
+      },
+      "source": [
+        "src/uditarepo_frontend/assets",
+        "dist/uditarepo_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
